@@ -15,6 +15,13 @@
 # gem 'pg'
 #
 development:
+  adapter: sqlite3
+  encoding: unicode
+  database: db/development.sqlite3
+  pool: 5
+  password:
+
+production:
   adapter: postgresql
   encoding: unicode
   database: myapp_development
