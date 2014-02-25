@@ -1,37 +1,8 @@
-<%= form_for(@movie) do |f| %>
-  <% if @movie.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@movie.errors.count, "error") %> prohibited this movie from being saved:</h2>
-
-      <ul>
-      <% @movie.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :cover %><br>
-    <%= f.text_field :cover %>
-  </div>
-  <div class="field">
-    <%= f.label :duration %><br>
-    <%= f.number_field :duration %>
-  </div>
-  <div class="field">
-    <%= f.label :summary %><br>
-    <%= f.text_area :summary %>
-  </div>
-  <div class="field">
-    <%= f.label :staff_notation %><br>
-    <%= f.text_field :staff_notation %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= simple_form_for @movie do |f| %>
+    <%= f.input :title, label: 'Titre du film'  %>
+    <%= f.input :cover, label: 'Pochette du film' %>
+    <%= f.input :duration, label: 'Durée du film' %>
+    <%= f.input :summary, label: 'Résumé du film' %>
+    <%= f.input :staff_notation, label: 'Note Staff du film' %>
+    <%= f.button :submit %>
 <% end %>

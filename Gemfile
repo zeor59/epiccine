@@ -3,13 +3,29 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
+# Formulaires
+gem 'simple_form'
+
+#Pagination
+gem 'kaminari'
+
+# Optimisation bdd (sors la liste des index à ajouter)
+gem "lol_dba"
+
+#Outil de recherche
+gem "ransack" 
+
 # Use postgresql as the database for Active Record
 group :production do
 	gem 'pg'
 end
 
 group :development do
+	gem "better_errors"
 	gem 'sqlite3'
+	gem "binding_of_caller"
+	gem "rails_best_practices" # qualité de code
+	gem 'brakeman', :require => false # scan des failles de sécurité
 end 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

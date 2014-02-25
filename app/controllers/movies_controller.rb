@@ -1,10 +1,12 @@
+#encoding: utf-8
+
 class MoviesController < ApplicationController
   before_action :set_movie, only: [:show, :edit, :update, :destroy]
 
   # GET /movies
   # GET /movies.json
   def index
-    @movies = Movie.all
+    @movies = Movie.page(params[:page]).per(1)
   end
 
   # GET /movies/1
@@ -28,10 +30,12 @@ class MoviesController < ApplicationController
 
     respond_to do |format|
       if @movie.save
-        format.html { redirect_to @movie, notice: 'Movie was successfully created.' }
+        flash['notice'] = 'ok, ajouté'
+        format.html { redirect_to @movie }
         format.json { render action: 'show', status: :created, location: @movie }
       else
-        format.html { render action: 'new' }
+        flash['error'] = 'fail'
+        format.html { render action: 'new'}
         format.json { render json: @movie.errors, status: :unprocessable_entity }
       end
     end
