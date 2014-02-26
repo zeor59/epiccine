@@ -1,7 +1,9 @@
 EpicCine::Application.routes.draw do
   devise_for :users
   resources :movies
-
+  resources :characters
+  resources :movie_characters
+  
   get "welcome/index"
   root 'welcome#index'
   # The priority is based upon order of creation: first created -> highest priority.

@@ -22,6 +22,7 @@ class MoviesController < ApplicationController
 
   # GET /movies/1/edit
   def edit
+    @movie_character = MovieCharacter.new
   end
 
   # POST /movies
