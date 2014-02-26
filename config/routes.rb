@@ -1,4 +1,5 @@
 EpicCine::Application.routes.draw do
+  devise_for :users
   resources :movies
 
   get "welcome/index"

@@ -15,6 +15,12 @@ gem "lol_dba"
 #Outil de recherche
 gem "ransack" 
 
+#Bootstrap
+gem 'bootstrap-sass'
+
+#Devise
+gem 'devise'
+
 # Use postgresql as the database for Active Record
 group :production do
 	gem 'pg'

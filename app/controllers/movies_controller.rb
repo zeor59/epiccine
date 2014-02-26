@@ -2,11 +2,12 @@
 
 class MoviesController < ApplicationController
   before_action :set_movie, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!
 
   # GET /movies
   # GET /movies.json
   def index
-    @movies = Movie.page(params[:page]).per(1)
+    @movies = Movie.page(params[:page]).per(2)
   end
 
   # GET /movies/1

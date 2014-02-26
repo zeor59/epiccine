@@ -1,13 +1,13 @@
-<h1>Listing movies</h1>
+<h1>Liste des films</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
-    <tr>
-      <th>Title</th>
-      <th>Cover</th>
-      <th>Duration</th>
-      <th>Summary</th>
-      <th>Staff notation</th>
+    <tr class="info">
+      <th>Titre</th>
+      <th>Pochette</th>
+      <th>Durée</th>
+      <th>Résumé</th>
+      <th>Note du staff</th>
       <th></th>
       <th></th>
       <th></th>
@@ -22,9 +22,9 @@
         <td><%= movie.duration %></td>
         <td><%= movie.summary %></td>
         <td><%= movie.staff_notation %></td>
-        <td><%= link_to 'Show', movie %></td>
-        <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
-        <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Voir', movie %></td>
+        <td><%= link_to 'Modifier', edit_movie_path(movie) %></td>
+        <td><%= link_to 'Supprimer', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
