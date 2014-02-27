@@ -11,9 +11,9 @@ class CommentsController < ApplicationController
     @comment.user_id = current_user.id
 
     if @comment.save
-      redirect_to movie_path(comment_params['movie_id']), notice: 'Le commentaire a bien été ajouté.' 
+      redirect_to movie_path(comment_params['movie_id']), notice: 'Le commentaire a bien été ajouté.'
     else
-      render action: 'new' 
+      redirect_to movie_path(comment_params['movie_id']), alert: 'Erreur lors de l\'ajout du commentaire !'
     end
   end
 

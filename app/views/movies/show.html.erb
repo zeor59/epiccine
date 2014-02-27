@@ -30,7 +30,7 @@
 <% @movie_characters.each do |movie_character| %>
   <% if movie_character.character %>
     <%= movie_character.character.first_name %> - 
-    <%= MovieCharacter::ROLES[movie_character.role] %> - 
+    <%= MovieCharacter::ROLES[movie_character.role] %>
     <br>
   <% end %>
 <% end %>
@@ -41,7 +41,11 @@
  Par : <%= comment.user.email %> <br>
  Le : <%= comment.created_at %> <br>
  Commentaire : <%= comment.comment %> <br>
- Note : <%= comment.notation %> <hr>
+ Note : <%= comment.notation %> 
+ <% if current_user.admin %>
+  <br> <%= link_to 'Supprimer', admin_comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %>
+ <% end %>
+ <hr>
 <% end %>
 
 <%= render 'comments/form' %>
