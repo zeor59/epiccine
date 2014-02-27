@@ -35,3 +35,13 @@
   <% end %>
 <% end %>
 
+<h2>Commentaires</h2>
+
+<% @comments.each do |comment| %>
+ <%= comment.user.first_name %>
+ <%= comment.date %>
+ <%= comment.comment %>
+ <%= comment.notation %>
+<% end %>
+
+<%= render 'comments/form' %>

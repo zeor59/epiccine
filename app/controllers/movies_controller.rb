@@ -9,6 +9,8 @@ class MoviesController < ApplicationController
 
   def show
     @movie_characters = MovieCharacter.where(movie_id: @movie.id)
+    @comments = Comment.where(movie_id: @movie.id)
+    @comment = Comment.new
   end
 
   private

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_user: 1
+  id_movie: 1
+  comment: MyText
+  date: 2014-02-27 14:00:47
+  notation: 1.5
+
+two:
+  id_user: 1
+  id_movie: 1
+  comment: MyText
+  date: 2014-02-27 14:00:47
+  notation: 1.5
