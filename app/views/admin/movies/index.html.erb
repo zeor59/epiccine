@@ -1,0 +1,36 @@
+<h1>Liste des films</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr class="info">
+      <th>Titre</span></th>
+      <th>Pochette</th>
+      <th>Durée</th>
+      <th>Résumé</th>
+      <th>Note du staff</th>
+      <th><span class="glyphicon glyphicon-eye-open"></th>
+      <th><span class="glyphicon glyphicon-edit"></th>
+      <th><span class="glyphicon glyphicon-trash"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @movies.each do |movie| %>
+      <tr>
+        <td><%= movie.title %></td>
+        <td><%= movie.cover %></td>
+        <td><%= movie.duration %></td>
+        <td><%= movie.summary %></td>
+        <td><%= movie.staff_notation %></td>
+        <td><%= link_to 'Voir', ['admin', movie] %></td>
+        <td><%= link_to 'Modifier', edit_admin_movie_path(movie) %></td>
+        <td><%= link_to 'Supprimer', ['admin', movie], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= paginate @movies %>
+<br />
+<%= link_to 'Nouveau film', new_admin_movie_path %>

@@ -4,8 +4,13 @@ EpicCine::Application.routes.draw do
   resources :characters
   resources :movie_characters
   
-  get "welcome/index"
-  root 'welcome#index'
+  root 'movies#index'
+
+  namespace 'admin' do
+    resources :movies
+    root 'movies#index'
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

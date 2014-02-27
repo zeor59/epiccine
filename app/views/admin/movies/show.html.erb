@@ -1,0 +1,39 @@
+<p>
+  <strong>Titre:</strong>
+  <%= @movie.title %>
+</p>
+
+<p>
+  <strong>Pochette:</strong>
+  <%= @movie.cover %>
+</p>
+
+<p>
+  <strong>Durée:</strong>
+  <%= @movie.duration %>
+</p>
+
+<p>
+  <strong>Résumé:</strong>
+  <%= @movie.summary %>
+</p>
+
+<p>
+  <strong>Note de l'équipe:</strong>
+  <%= @movie.staff_notation %>
+</p>
+
+<%= link_to 'Modifier', edit_admin_movie_path(@movie) %> |
+<%= link_to 'Retour', admin_movies_path %>
+
+<h2>Participants</h2>
+
+<% @movie_characters.each do |movie_character| %>
+  <% if movie_character.character %>
+    <%= movie_character.character.first_name %> - 
+    <%= MovieCharacter::ROLES[movie_character.role] %> - 
+    <%= link_to 'Supprimer', admin_movie_character, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <br>
+  <% end %>
+<% end %>
+

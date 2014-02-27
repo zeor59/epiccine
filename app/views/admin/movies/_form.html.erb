@@ -1,0 +1,8 @@
+<%= simple_form_for ['admin', @movie] do |f| %>
+    <%= f.input :title, label: 'Titre du film'  %>
+    <%= f.input :cover, label: 'Pochette du film' %>
+    <%= f.input :duration, label: 'Durée du film' %>
+    <%= f.input :summary, label: 'Résumé du film' %>
+    <%= f.input :staff_notation, label: 'Note Staff du film' %>
+    <%= f.button :submit %>
+<% end %>
