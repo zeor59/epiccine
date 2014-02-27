@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140227134938) do
+ActiveRecord::Schema.define(version: 20140227152543) do
 
   create_table "characters", force: true do |t|
     t.string   "first_name"
@@ -21,6 +21,10 @@ ActiveRecord::Schema.define(version: 20140227134938) do
     t.string   "picture"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
   end
 
   create_table "comments", force: true do |t|
@@ -51,6 +55,10 @@ ActiveRecord::Schema.define(version: 20140227134938) do
     t.float    "staff_notation"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "cover_file_name"
+    t.string   "cover_content_type"
+    t.integer  "cover_file_size"
+    t.datetime "cover_updated_at"
   end
 
   create_table "users", force: true do |t|

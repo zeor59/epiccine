@@ -19,7 +19,7 @@
         <td><%= character.first_name %></td>
         <td><%= character.birthday %></td>
         <td><%= character.biography %></td>
-        <td><%= character.picture%></td>
+        <td><%= image_tag character.picture.url %></td>
         <td><%= link_to 'Voir', character %></td>
       </tr>
     <% end %>

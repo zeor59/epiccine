@@ -54,6 +54,10 @@ GEM
       terminal-table (~> 1.4)
     builder (3.1.4)
     cancan (1.6.10)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.3)
+      climate_control (>= 0.0.3, < 1.0)
     code_analyzer (0.4.4)
       sexp_processor
     coderay (1.1.0)
@@ -101,6 +105,11 @@ GEM
     minitest (4.7.5)
     multi_json (1.8.4)
     orm_adapter (0.5.0)
+    paperclip (4.1.1)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.3)
+      mime-types
     pg (0.17.1)
     pg (0.17.1-x86-mingw32)
     polyamorous (0.6.4)
@@ -210,6 +219,7 @@ DEPENDENCIES
   jquery-rails
   kaminari
   lol_dba
+  paperclip (~> 4.1)
   pg
   rails (= 4.0.2)
   rails_12factor
