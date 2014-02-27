@@ -3,7 +3,11 @@
 <table class="table table-striped">
   <thead>
     <tr class="info">
+      <th>Prénom</th>
       <th>Nom</th>
+      <th>Date de naissance</th>
+      <th>Biographie</th>
+      <th><span class="glyphicon glyphicon-picture"></span></th>
       <th></th>
     </tr>
   </thead>
@@ -11,7 +15,11 @@
   <tbody>
     <% @characters.each do |character| %>
       <tr>
+        <td><%= character.last_name %></td>
         <td><%= character.first_name %></td>
+        <td><%= character.birthday %></td>
+        <td><%= character.biography %></td>
+        <td><%= character.picture%></td>
         <td><%= link_to 'Voir', character %></td>
       </tr>
     <% end %>
