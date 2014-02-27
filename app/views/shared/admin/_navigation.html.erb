@@ -12,8 +12,8 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li <% if current_page?(:controller => 'movies') %>class="active"<% end %>><a href="/admin/movies">Films</a></li>
-        <li <% if current_page?(:controller => 'characters') %>class="active"<% end %>><a href="/admin/characters">Personnages</a></li>
+        <li <% if current_page?(:controller => 'admin/movies') %>class="active"<% end %>><a href="/admin/movies">Films</a></li>
+        <li <% if current_page?(:controller => 'admin/characters') %>class="active"<% end %>><a href="/admin/characters">Personnages</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/">Retour au site</a></li>

@@ -38,10 +38,10 @@
 <h2>Commentaires</h2>
 
 <% @comments.each do |comment| %>
- <%= comment.user.first_name %>
- <%= comment.date %>
- <%= comment.comment %>
- <%= comment.notation %>
+ Par : <%= comment.user.email %> <br>
+ Le : <%= comment.created_at %> <br>
+ Commentaire : <%= comment.comment %> <br>
+ Note : <%= comment.notation %> <hr>
 <% end %>
 
 <%= render 'comments/form' %>
