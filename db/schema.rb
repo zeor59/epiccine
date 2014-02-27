@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140227092128) do
+ActiveRecord::Schema.define(version: 20140227130047) do
 
   create_table "characters", force: true do |t|
     t.string   "first_name"
@@ -19,6 +19,18 @@ ActiveRecord::Schema.define(version: 20140227092128) do
     t.date     "birthday"
     t.text     "biography"
     t.string   "picture"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "comments", force: true do |t|
+    t.integer  "id_user"
+    t.integer  "id_movie"
+    t.text     "comment"
+    t.datetime "date"
+    t.float    "notation"
+    t.integer  "movie_id"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
