@@ -1,6 +1,9 @@
 class MovieCharacter < ActiveRecord::Base
+	validates :movie, presence: true
+	validates :character, presence: true
+	validates :role, presence: true
 	belongs_to :movie
 	belongs_to :character
 
-	#validates_inclusion_of :role, %w(1, 2, 3 4)
+	ROLES = { 0 => 'Realisateur', 1 => 'Acteur' }
 end

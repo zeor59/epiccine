@@ -6,8 +6,9 @@
 <%= link_to 'Back', movies_path %>
 
 <%= simple_form_for @movie_character do |f| %>
-	<%= f.input :movie_id, input_html: { value: @movie.id }, as: :hidden %>
-	<%= f.association :character, label_method: :first_name, value_method: :id, label: 'Personne' %>
-	<%= f.input :role %>
-	<%= f.submit %>
+  <%= f.input :movie_id, input_html: { value: @movie.id }, as: :hidden %>
+  <%= f.association :character, label_method: :first_name, value_method: :id, label: 'Personne' %>
+  <%= f.select :role, MovieCharacter::ROLES %>
+  <br>
+  <%= f.submit %>
 <% end %>

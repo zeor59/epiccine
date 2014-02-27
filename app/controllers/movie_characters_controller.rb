@@ -1,16 +1,22 @@
 #encoding: utf-8
+
 class MovieCharactersController < ApplicationController
 
     def create
         movie_character = MovieCharacter.new(movie_params)
 
         if movie_character.save
-            flash['notice'] = 'ok, ajouté'
-            redirect_to movies_path
-        else
-            flash['error'] = 'fail'
-            format.html { render action: 'new'}
+            redirect_to edit_movie_path(movie_params['movie_id']), notice: 'Personne ajoutée au film !'
+        else    
+            redirect_to edit_movie_path(movie_params['movie_id']), alert: 'Erreur lors de l\'ajout.'
         end
+    end
+
+    def destroy
+        movie_character = MovieCharacter.find(params[:id])
+        movie_id = movie_character.movie_id
+        movie_character.destroy
+        redirect_to movie_path(movie_id)
     end
     
     def movie_params
