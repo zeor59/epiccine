@@ -9,6 +9,7 @@ EpicCine::Application.routes.draw do
   namespace 'admin' do
     resources :movies
     resources :characters
+    resources :movie_characters
     root 'movies#index'
   end
 
