@@ -46,6 +46,6 @@ class Admin::CharactersController < AdminController
     end
 
     def character_params
-      params.require(:character).permit(:first_name)
+      params.require(:character).permit(:first_name, :last_name, :birthday, :biography, :picture)
     end
 end

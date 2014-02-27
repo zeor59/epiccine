@@ -1,4 +1,8 @@
 <%= simple_form_for ['admin', @character] do |f| %>
     <%= f.input :first_name, label: 'Nom'  %>
+    <%= f.input :last_name  %>
+    <%= f.input :birthday, as: 'string' %>
+    <%= f.input :picture  %>
+    <%= f.input :biography  %>
     <%= f.button :submit %>
 <% end %>

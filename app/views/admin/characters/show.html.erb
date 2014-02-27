@@ -1,9 +1,19 @@
 <p>
   <strong>Nom: </strong>
-  <%= @character.first_name %>
+  <%= @character.first_name %><br>
+
+  <strong>Prénom: </strong>
+  <%= @character.last_name %><br>
+
+  <strong>Naissance: </strong>
+  <%= @character.birthday %><br>
+
+  <strong>Image: </strong>
+  <%= @character.picture %><br>
+
+  <strong>Biographie: </strong>
+  <%= @character.biography %>
 </p>
-
-
 
 <%= link_to 'Edit', edit_admin_character_path(@character) %> |
 <%= link_to 'Back', admin_characters_path %>
