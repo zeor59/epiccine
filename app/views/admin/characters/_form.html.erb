@@ -1,4 +1,4 @@
-<%= simple_form_for @character do |f| %>
+<%= simple_form_for ['admin', @character] do |f| %>
     <%= f.input :first_name, label: 'Nom'  %>
     <%= f.button :submit %>
 <% end %>

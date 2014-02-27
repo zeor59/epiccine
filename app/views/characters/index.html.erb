@@ -5,8 +5,6 @@
     <tr class="info">
       <th>Nom</th>
       <th></th>
-      <th></th>
-      <th></th>
     </tr>
   </thead>
 
@@ -15,8 +13,6 @@
       <tr>
         <td><%= character.first_name %></td>
         <td><%= link_to 'Voir', character %></td>
-        <td><%= link_to 'Modifier', edit_character_path(character) %></td>
-        <td><%= link_to 'Supprimer', character, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +20,3 @@
 
 <br>
 <%= paginate @characters %>
-<%= link_to 'New Character', new_character_path %>

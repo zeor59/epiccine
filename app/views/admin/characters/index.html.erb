@@ -1,0 +1,27 @@
+<h1>Liste des personnes</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr class="info">
+      <th>Nom</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @characters.each do |character| %>
+      <tr>
+        <td><%= character.first_name %></td>
+        <td><%= link_to 'Voir', admin_character_path(character) %></td>
+        <td><%= link_to 'Modifier', edit_admin_character_path(character) %></td>
+        <td><%= link_to 'Supprimer', admin_character_path(character), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= paginate @characters %>
+<%= link_to 'New Character', new_admin_character_path %>

@@ -23,7 +23,6 @@
   <%= @movie.staff_notation %>
 </p>
 
-<%= link_to 'Modifier', edit_movie_path(@movie) %> |
 <%= link_to 'Retour', movies_path %>
 
 <h2>Participants</h2>
@@ -32,7 +31,6 @@
   <% if movie_character.character %>
     <%= movie_character.character.first_name %> - 
     <%= MovieCharacter::ROLES[movie_character.role] %> - 
-    <%= link_to 'Supprimer', movie_character, method: :delete, data: { confirm: 'Are you sure?' } %>
     <br>
   <% end %>
 <% end %>

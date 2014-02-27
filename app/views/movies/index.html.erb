@@ -9,8 +9,6 @@
       <th>Résumé</th>
       <th>Note du staff</th>
       <th><span class="glyphicon glyphicon-eye-open"></th>
-      <th><span class="glyphicon glyphicon-edit"></th>
-      <th><span class="glyphicon glyphicon-trash"></th>
     </tr>
   </thead>
 
@@ -23,8 +21,6 @@
         <td><%= movie.summary %></td>
         <td><%= movie.staff_notation %></td>
         <td><%= link_to 'Voir', movie %></td>
-        <td><%= link_to 'Modifier', edit_movie_path(movie) %></td>
-        <td><%= link_to 'Supprimer', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,5 +28,3 @@
 
 <br>
 <%= paginate @movies %>
-<br />
-<%= link_to 'Nouveau film', new_movie_path %>
