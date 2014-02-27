@@ -12,13 +12,13 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/admin/movies">Films</a></li>
-        <li><a href="/admin/characters">Personnages</a></li>
+        <li <% if current_page?(:controller => 'movies') %>class="active"<% end %>><a href="/admin/movies">Films</a></li>
+        <li <% if current_page?(:controller => 'characters') %>class="active"<% end %>><a href="/admin/characters">Personnages</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/">Retour au site</a></li>
         <li><%= link_to "Déconnexion", destroy_user_session_path, method: 'delete' %></li>
-    </ul>
+      </ul>
     </div>
   </div>
 </nav>

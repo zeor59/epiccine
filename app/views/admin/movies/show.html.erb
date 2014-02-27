@@ -32,7 +32,7 @@
   <% if movie_character.character %>
     <%= movie_character.character.first_name %> - 
     <%= MovieCharacter::ROLES[movie_character.role] %> - 
-    <%= link_to 'Supprimer', admin_movie_character, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'Supprimer', admin_movie_character_path(movie_character), method: :delete, data: { confirm: 'Are you sure?' } %>
     <br>
   <% end %>
 <% end %>
