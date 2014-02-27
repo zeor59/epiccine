@@ -23,6 +23,9 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.email %><b class="caret"></b></a>
             <ul class="dropdown-menu">
                 <li><%= link_to "Edition profil", edit_user_registration_path %></li>
+                <% if current_user.admin %>
+                <li><%= link_to "Aministration", admin_root_path %></li>
+                <% end %>
                 <li class="divider"></li>
                 <li><%= link_to "Déconnexion", destroy_user_session_path, method: 'delete' %></li>
             </ul>
