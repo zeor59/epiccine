@@ -1,27 +1,27 @@
 <p>
-  <strong>Title:</strong>
+  <strong>Titre:</strong>
   <%= @movie.title %>
 </p>
 
 <p>
-  <strong>Cover:</strong>
+  <strong>Pochette:</strong>
   <%= @movie.cover %>
 </p>
 
 <p>
-  <strong>Duration:</strong>
+  <strong>Durée:</strong>
   <%= @movie.duration %>
 </p>
 
 <p>
-  <strong>Summary:</strong>
+  <strong>Résumé:</strong>
   <%= @movie.summary %>
 </p>
 
 <p>
-  <strong>Staff notation:</strong>
+  <strong>Note de l'équipe:</strong>
   <%= @movie.staff_notation %>
 </p>
 
-<%= link_to 'Edit', edit_movie_path(@movie) %> |
-<%= link_to 'Back', movies_path %>
+<%= link_to 'Modifier', edit_movie_path(@movie) %> |
+<%= link_to 'Retour', movies_path %>

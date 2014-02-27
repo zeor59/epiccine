@@ -21,6 +21,9 @@ gem 'bootstrap-sass'
 #Devise
 gem 'devise'
 
+#Cancan
+gem "cancan"
+
 # Use postgresql as the database for Active Record
 group :production do
 	gem 'pg'

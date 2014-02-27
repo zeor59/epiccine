@@ -2,8 +2,13 @@
 
 class MoviesController < ApplicationController
   before_action :set_movie, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :admin
 
+  def admin
+    if !current_user.admin 
+      redirect_to root_path, alert: 'Permission Denied'
+    end 
+  end
   # GET /movies
   # GET /movies.json
   def index

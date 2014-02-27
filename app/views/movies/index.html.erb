@@ -3,14 +3,14 @@
 <table class="table table-striped">
   <thead>
     <tr class="info">
-      <th>Titre</th>
+      <th>Titre</span></th>
       <th>Pochette</th>
       <th>Durée</th>
       <th>Résumé</th>
       <th>Note du staff</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th><span class="glyphicon glyphicon-eye-open"></th>
+      <th><span class="glyphicon glyphicon-edit"></th>
+      <th><span class="glyphicon glyphicon-trash"></th>
     </tr>
   </thead>
 
@@ -32,4 +32,5 @@
 
 <br>
 <%= paginate @movies %>
-<%= link_to 'New Movie', new_movie_path %>
+<br />
+<%= link_to 'Nouveau film', new_movie_path %>

@@ -8,10 +8,8 @@ class CharactersController < ApplicationController
     @characters = Character.page(params[:page]).per(2)
   end
 
-
   def show
   end
-
 
   def new
     @character = Character.new
