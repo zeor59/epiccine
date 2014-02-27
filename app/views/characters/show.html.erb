@@ -1,6 +1,26 @@
 <p>
   <strong>Nom: </strong>
-  <%= @character.first_name %>
+  <%= @character.first_name %><br>
+
+  <strong>Prénom: </strong>
+  <%= @character.last_name %><br>
+
+  <strong>Naissance: </strong>
+  <%= @character.birthday %><br>
+
+  <strong>Image: </strong>
+  <%= @character.picture %><br>
+
+  <strong>Biographie: </strong>
+  <%= @character.biography %>
 </p>
+
+<h2>Participations</h2>
+
+<% @character.movie_characters.each do |movie_character| %>
+	<%= movie_character.movie.title %> (<%= MovieCharacter::ROLES[movie_character.role] %>)<br>
+<% end %>
+
+<br>
 
 <%= link_to 'Retour', characters_path %>
