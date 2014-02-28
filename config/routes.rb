@@ -1,22 +1,22 @@
 EpicCine::Application.routes.draw do
-  resources :cinemas
 
-  resources :comments
-
-  devise_for :users
-  resources :movies
-  resources :characters
-  resources :movie_characters
-  
-  root 'movies#index'
-
-  namespace 'admin' do
-    resources :cinemas
+  scope "(:locale)" do  
+    devise_for :users
     resources :movies
     resources :characters
     resources :movie_characters
     resources :comments
+    resources :cinemas
+    
     root 'movies#index'
+
+    namespace 'admin' do
+      resources :movies
+      resources :characters
+      resources :movie_characters
+      resources :comments
+      root 'movies#index'
+    end
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
