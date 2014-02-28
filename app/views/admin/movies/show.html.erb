@@ -23,16 +23,16 @@
   <%= @movie.staff_notation %>
 </p>
 
-<%= link_to 'Modifier', edit_admin_movie_path(@movie) %> |
-<%= link_to 'Retour', admin_movies_path %>
+<%= link_to 'Modifier', edit_admin_movie_path(@movie), { class: 'btn btn-success' } %>
+<%= link_to 'Retour', admin_movies_path, { class: 'btn btn-success' } %>
 
 <h2>Participants</h2>
 
 <% @movie_characters.each do |movie_character| %>
   <% if movie_character.character %>
-    <%= movie_character.character.first_name %> - 
-    <%= MovieCharacter::ROLES[movie_character.role] %> - 
-    <%= link_to 'Supprimer', admin_movie_character_path(movie_character), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= movie_character.character.last_name %> <%= movie_character.character.first_name %> - 
+    <%= MovieCharacter::ROLES[movie_character.role] %> 
+    <%= link_to 'Supprimer', admin_movie_character_path(movie_character), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
     <br>
   <% end %>
 <% end %>

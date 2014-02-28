@@ -8,4 +8,13 @@ class Character < ActiveRecord::Base
 	validates :birthday, presence: true
 	has_many :movie_characters
 	has_many :movies, through: :movie_characters
+
+	def age
+	  now = Time.now.utc.to_date
+	  now.year - birthday.year - (birthday.to_date.change(:year => now.year) > now ? 1 : 0)
+	end
+
+	def full_name
+		last_name + " " + first_name
+	end
 end

@@ -5,8 +5,8 @@
   <strong>Prénom: </strong>
   <%= @character.last_name %><br>
 
-  <strong>Naissance: </strong>
-  <%= @character.birthday %><br>
+  <strong>Age: </strong>
+  <%= @character.age %><br>
 
   <strong>Image: </strong>
   <%= image_tag @character.picture.url %><br>
@@ -15,5 +15,5 @@
   <%= @character.biography %>
 </p>
 
-<%= link_to 'Edit', edit_admin_character_path(@character) %> |
-<%= link_to 'Back', admin_characters_path %>
+<%= link_to 'Edit', edit_admin_character_path(@character), class: 'btn btn-success' %>
+<%= link_to 'Back', admin_characters_path, class: 'btn btn-success' %>
