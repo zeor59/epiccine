@@ -1,9 +1,12 @@
-<h1>Liste des cinémas</h1>
+<h1><%= t('views.all_cinemas') %></h1>
 
 <table class="table table-striped">
   <thead>
     <tr class="info">
-      <th>Titre</th>
+      <th><%= t('views.name') %></th>
+      <th><%= t('views.city') %></th>
+      <th><%= t('views.address') %></th>
+      <th><%= t('views.zipcode') %></th>
       <th><span class="glyphicon glyphicon-eye-open"></th>
     </tr>
   </thead>
@@ -12,6 +15,9 @@
     <% @cinemas.each do |cinema| %>
       <tr>
         <td><%= cinema.name %></td>
+        <td><%= cinema.city %></td>
+        <td><%= cinema.address %></td>
+        <td><%= cinema.zip_code %></td>
         <td><%= link_to 'Voir', cinema %></td>
       </tr>
     <% end %>

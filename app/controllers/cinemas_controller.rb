@@ -5,6 +5,7 @@ class CinemasController < ApplicationController
   end
 
   def show
+  	@cinema = Cinema.find(params[:id])
   end
 
 end
