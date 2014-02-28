@@ -25,7 +25,7 @@ gem 'devise'
 gem "cancan"
 
 # Gestion upload fichier
-gem "paperclip", "~> 4.1"
+gem "paperclip"
 
 # Use postgresql as the database for Active Record
 group :production do

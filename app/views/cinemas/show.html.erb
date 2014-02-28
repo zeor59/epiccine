@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cinema.name %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @cinema.city %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @cinema.address %>
+</p>
+
+<p>
+  <strong>Zip code:</strong>
+  <%= @cinema.zip_code %>
+</p>
+
+<%= link_to 'Edit', edit_cinema_path(@cinema) %> |
+<%= link_to 'Back', cinemas_path %>

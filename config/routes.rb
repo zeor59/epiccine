@@ -1,4 +1,6 @@
 EpicCine::Application.routes.draw do
+  resources :cinemas
+
   resources :comments
 
   devise_for :users

@@ -30,4 +30,6 @@ EpicCine::Application.configure do
   #devise
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
 
+  Paperclip.options[:command_path] = 'C:\Sites\ImageMagick-6.8.8-Q16'
+
 end
