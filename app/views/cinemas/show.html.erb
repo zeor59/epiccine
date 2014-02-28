@@ -1,24 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nom:</strong>
   <%= @cinema.name %>
 </p>
 
 <p>
-  <strong>City:</strong>
+  <strong>Ville:</strong>
   <%= @cinema.city %>
 </p>
 
 <p>
-  <strong>Address:</strong>
+  <strong>Adresse:</strong>
   <%= @cinema.address %>
 </p>
 
 <p>
-  <strong>Zip code:</strong>
+  <strong>Code postale:</strong>
   <%= @cinema.zip_code %>
 </p>
 
-<%= link_to 'Edit', edit_cinema_path(@cinema) %> |
-<%= link_to 'Back', cinemas_path %>
+<%= link_to 'Modifier', edit_cinema_path(@cinema), class: 'btn btn-success' %>
+<%= link_to 'Retour à la liste', cinemas_path, class: 'btn btn-success' %>

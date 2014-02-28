@@ -1,1 +1,18 @@
 fr:
+  nav:
+    movies: "Les films"
+    cinemas: "Les cinémas"
+    languages: "Langues"
+    characters: "Les personnages"
+    return: "Retour au site"
+    logout: "Se déconnecter"
+    login: " Se connecter"
+    edit_profile: "Editer profil"
+    admin: "Administration"
+  views:
+    all_movies: "Liste des films"
+    all_cinemas: "Liste des cinémas"
+    name: "Nom"
+    address: "Adresse"
+    zipcode: "Code postal"
+    city: "Ville"

@@ -7,21 +7,27 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/admin"><%= image_tag "banner.png" %>Epic Cine - Administration</a>
+      <%= link_to (image_tag "banner.png") + "Epic cine Admin", root_path, class: 'navbar-brand' %>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li <% if current_page?(:controller => 'admin/movies') %>class="active"<% end %>><a href="/admin/movies">Films</a></li>
+        <li <% if current_page?(:controller => 'admin/movies') %>class="active"<% end %>>
+          <%= link_to t('nav.movies'), admin_movies_path %>
+        </li>
 
-        <li <% if current_page?(:controller => 'admin/characters') %>class="active"<% end %>><a href="/admin/characters">Personnages</a></li>
+        <li <% if current_page?(:controller => 'admin/characters') %>class="active"<% end %>>
+          <%= link_to t('nav.characters'), admin_characters_path %>
+        </li>
 
-        <li <% if current_page?(:controller => 'admin/cinemas') %>class="active"<% end %>><a href="/admin/cinemas">Salles de cinéma</a></li>
+        <li <% if current_page?(:controller => 'admin/cinemas') %>class="active"<% end %>>
+          <%= link_to t('nav.cinemas'), admin_cinemas_path %>
+        </li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/">Retour au site</a></li>
-        <li><%= link_to "Déconnexion", destroy_user_session_path, method: 'delete' %></li>
+        <li><%= link_to t('nav.return'), root_path %></li>
+        <li><%= link_to t('nav.logout'), destroy_user_session_path, method: 'delete' %></li>
       </ul>
     </div>
   </div>
