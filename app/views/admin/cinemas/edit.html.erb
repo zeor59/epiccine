@@ -4,3 +4,14 @@
 
 <%= link_to 'Voir', admin_cinema_path(@cinema), class: 'btn btn-success' %> 
 <%= link_to 'Retour', admin_cinemas_path, class: 'btn btn-success' %>
+
+<hr>
+<h2>Ajouter une séance</h2>
+
+<%= simple_form_for ['admin', @cinema_movie] do |f| %>
+  <%= f.input :cinema_id, input_html: { value: @cinema.id }, as: :hidden %>
+  <%= f.association :movie, label_method: :title, value_method: :id, label: 'Film' %>
+  <%= f.input :session, as: :string, label: 'Horaire' %>
+  <br>
+  <%= f.button :submit, 'Valider la sélection' %>
+<% end %>

@@ -6,13 +6,13 @@
 <%= link_to 'Back', admin_movies_path, { class: 'btn btn-success' }  %>
 
 <hr>
-<h2>Ajouter des participants</h2>
+<h2>Ajouter un participant</h2>
 
 <%= simple_form_for ['admin', @movie_character] do |f| %>
   <%= f.input :movie_id, input_html: { value: @movie.id }, as: :hidden %>
   <%= f.association :character, label_method: :full_name, value_method: :id, label: 'Personne' %>
   <%= f.select :role, MovieCharacter::ROLES.map { |key, value| [value, key] }, {}, { class: 'select required form-control' } %>
   <br>
-  <%= f.button :submit %>
+  <%= f.button :submit, 'Valider la sélection' %>
 <% end %>
 

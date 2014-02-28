@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140228084750) do
+ActiveRecord::Schema.define(version: 20140228111208) do
 
   create_table "characters", force: true do |t|
     t.string   "first_name"
@@ -25,6 +25,14 @@ ActiveRecord::Schema.define(version: 20140228084750) do
     t.string   "picture_content_type"
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
+  end
+
+  create_table "cinema_movies", force: true do |t|
+    t.integer  "movie_id"
+    t.integer  "cinema_id"
+    t.datetime "session"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "cinemas", force: true do |t|

@@ -20,3 +20,33 @@
 
 <%= link_to 'Modifier', edit_admin_cinema_path(@cinema), class: 'btn btn-success' %> 
 <%= link_to 'Retour', admin_cinemas_path, class: 'btn btn-success' %>
+
+<hr>
+<h2>Films à l'affiche</h2>
+<table class="table table-striped">
+  <thead>
+    <tr class="info">
+      <th>Pochette</th>
+      <th>Nom du film</th>
+      <th>Résumé</th>
+      <th>Durée</th>
+      <th>Note de l'équipe</th>
+      <th>Horaire</th>
+      <th><span class="glyphicon glyphicon-trash"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sessions.each do |session| %>
+      <tr>
+        <td><%= image_tag session.movie.cover.url('thumb') %></td>
+        <td><%= session.movie.title %></td>
+        <td><%= session.movie.summary %></td>
+        <td><%= session.movie.duration %> Min</td>
+        <td><%= session.movie.staff_notation %> / 5</td>
+        <td><%= session.session.strftime('%d/%m/%Y à %H:%M') %></td>
+        <td><%= link_to 'Supprimer', admin_cinema_movie_path(session), method: :delete, data: { confirm: 'Êtes vous sûr?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

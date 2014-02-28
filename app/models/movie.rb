@@ -7,4 +7,6 @@ class Movie < ActiveRecord::Base
 	has_many :moviecharacters
 	has_many :characters, through: :moviecharacters
 	has_many :comments
+	has_many :cinemamovies
+	has_many :cinemas, through: :cinemamovies
 end

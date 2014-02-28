@@ -7,6 +7,7 @@ class Admin::CinemasController < AdminController
   end
 
   def show
+    @sessions = CinemaMovie.where(cinema_id: @cinema.id)
   end
 
   def new
@@ -15,6 +16,7 @@ class Admin::CinemasController < AdminController
 
   # GET /cinemas/1/edit
   def edit
+    @cinema_movie = CinemaMovie.new
   end
 
   def create
