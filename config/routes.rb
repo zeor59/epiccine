@@ -1,6 +1,6 @@
 EpicCine::Application.routes.draw do
 
-  scope "(:locale)" do  
+  scope "(:locale)", locale: /fr|en/ do  
     devise_for :users
     resources :movies
     resources :characters

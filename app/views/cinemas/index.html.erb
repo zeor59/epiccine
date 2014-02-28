@@ -1,15 +1,10 @@
-<h1>Listing cinemas</h1>
+<h1>Liste des cinémas</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
-    <tr>
-      <th>Name</th>
-      <th>City</th>
-      <th>Address</th>
-      <th>Zip code</th>
-      <th></th>
-      <th></th>
-      <th></th>
+    <tr class="info">
+      <th>Titre</th>
+      <th><span class="glyphicon glyphicon-eye-open"></th>
     </tr>
   </thead>
 
@@ -17,17 +12,8 @@
     <% @cinemas.each do |cinema| %>
       <tr>
         <td><%= cinema.name %></td>
-        <td><%= cinema.city %></td>
-        <td><%= cinema.address %></td>
-        <td><%= cinema.zip_code %></td>
-        <td><%= link_to 'Show', cinema %></td>
-        <td><%= link_to 'Edit', edit_cinema_path(cinema) %></td>
-        <td><%= link_to 'Destroy', cinema, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Voir', cinema %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Cinema', new_cinema_path %>
