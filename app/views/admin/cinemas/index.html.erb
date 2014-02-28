@@ -1,0 +1,33 @@
+<h1>Listing cinemas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>City</th>
+      <th>Address</th>
+      <th>Zip code</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cinemas.each do |cinema| %>
+      <tr>
+        <td><%= cinema.name %></td>
+        <td><%= cinema.city %></td>
+        <td><%= cinema.address %></td>
+        <td><%= cinema.zip_code %></td>
+        <td><%= link_to 'Show', admin_cinema_path(cinema) %></td>
+        <td><%= link_to 'Edit', edit_admin_cinema_path(cinema) %></td>
+        <td><%= link_to 'Destroy', admin_cinema_path(cinema), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cinema', new_admin_cinema_path %>

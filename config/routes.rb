@@ -11,6 +11,7 @@ EpicCine::Application.routes.draw do
   root 'movies#index'
 
   namespace 'admin' do
+    resources :cinemas
     resources :movies
     resources :characters
     resources :movie_characters

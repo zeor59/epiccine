@@ -14,6 +14,9 @@
       <ul class="nav navbar-nav">
         <li <% if current_page?(:controller => '/movies') %>class="active"<% end %>><a href="/movies">Films</a></li>
       </ul>
+      <ul class="nav navbar-nav">
+        <li <% if current_page?(:controller => '/cinemas') %>class="active"<% end %>><a href="/cinemas">Salles de cinéma</a></li>
+      </ul>
       <ul class="nav navbar-nav navbar-right">
     <% if user_signed_in? %>  
         <li class="dropdown">

@@ -1,0 +1,22 @@
+<p>
+  <strong>Name:</strong>
+  <%= @cinema.name %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @cinema.city %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @cinema.address %>
+</p>
+
+<p>
+  <strong>Zip code:</strong>
+  <%= @cinema.zip_code %>
+</p>
+
+<%= link_to 'Edit', edit_admin_cinema_path(@cinema) %> |
+<%= link_to 'Back', admin_cinemas_path %>

@@ -5,8 +5,8 @@
   <strong>Prénom: </strong>
   <%= @character.last_name %><br>
 
-  <strong>Naissance: </strong>
-  <%= @character.birthday %><br>
+  <strong>Age: </strong>
+  <%= @character.age %><br>
 
   <strong>Image: </strong>
   <%= image_tag @character.picture.url %><br>
@@ -18,9 +18,5 @@
 <h2>Participations</h2>
 
 <% @character.movie_characters.each do |movie_character| %>
-	<%= movie_character.movie.title %> (<%= MovieCharacter::ROLES[movie_character.role] %>)<br>
+	<%= movie_character.movie.title %> (<%= MovieCharacter::ROLES[movie_character.role] %>) <%= link_to "Voir le film", movie_path(movie_character.movie), class: 'btn btn-success' %><br>
 <% end %>
-
-<br>
-
-<%= link_to 'Retour', characters_path %>
