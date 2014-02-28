@@ -18,5 +18,5 @@
   <%= @cinema.zip_code %>
 </p>
 
-<%= link_to 'Edit', edit_admin_cinema_path(@cinema) %> |
-<%= link_to 'Back', admin_cinemas_path %>
+<%= link_to 'Modifier', edit_admin_cinema_path(@cinema), class: 'btn btn-success' %> 
+<%= link_to 'Retour', admin_cinemas_path, class: 'btn btn-success' %>

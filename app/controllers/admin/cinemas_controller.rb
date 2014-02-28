@@ -21,9 +21,9 @@ class Admin::CinemasController < AdminController
     @cinema = Cinema.new(cinema_params)
 
     if @cinema.save
-        redirect_to ['admin', @cinema], notice: 'Ok'
+        redirect_to ['admin', @cinema], notice: 'Le cinéma a été ajouté avec succès'
     else
-      render action: 'new', alert: 'Ko'
+      render action: 'new', alert: 'Erreur'
     end
   end
 
@@ -31,7 +31,7 @@ class Admin::CinemasController < AdminController
     if @cinema.update(cinema_params)
         redirect_to ['admin', @cinema], notice: 'Fiche cinéma mise à jour'
     else
-      render action: 'edit', alert: 'Ko'
+      render action: 'edit', alert: 'Erreur'
     end
   end
 

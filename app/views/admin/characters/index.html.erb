@@ -21,7 +21,7 @@
         <td><%= character.first_name %></td>
         <td><%= character.age %></td>
         <td><%= character.biography %></td>
-        <td><%= image_tag character.picture.url %></td>
+        <td><%= image_tag character.picture.url('thumb') %></td>
         <td><%= link_to 'Voir', admin_character_path(character) %></td>
         <td><%= link_to 'Modifier', edit_admin_character_path(character) %></td>
         <td><%= link_to 'Supprimer', admin_character_path(character), method: :delete, data: { confirm: 'Confirmez vous la suppression ?' } %></td>

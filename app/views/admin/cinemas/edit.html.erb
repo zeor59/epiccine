@@ -1,6 +1,6 @@
-<h1>Editing cinema</h1>
+<h1>Modifier un cinéma</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', admin_cinema_path(@cinema) %> |
-<%= link_to 'Back', admin_cinemas_path %>
+<%= link_to 'Voir', admin_cinema_path(@cinema), class: 'btn btn-success' %> 
+<%= link_to 'Retour', admin_cinemas_path, class: 'btn btn-success' %>

@@ -1,15 +1,15 @@
-<h1>Listing cinemas</h1>
+<h1>Liste des cinémas</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
-    <tr>
-      <th>Name</th>
-      <th>City</th>
-      <th>Address</th>
-      <th>Zip code</th>
-      <th></th>
-      <th></th>
-      <th></th>
+    <tr class="info">
+      <th>Nom du cinéma</th>
+      <th>Ville</th>
+      <th>Adresse</th>
+      <th>Code postale</th>
+      <th><span class="glyphicon glyphicon-eye-open"></th>
+      <th><span class="glyphicon glyphicon-edit"></th>
+      <th><span class="glyphicon glyphicon-trash"></th>
     </tr>
   </thead>
 
@@ -20,9 +20,9 @@
         <td><%= cinema.city %></td>
         <td><%= cinema.address %></td>
         <td><%= cinema.zip_code %></td>
-        <td><%= link_to 'Show', admin_cinema_path(cinema) %></td>
-        <td><%= link_to 'Edit', edit_admin_cinema_path(cinema) %></td>
-        <td><%= link_to 'Destroy', admin_cinema_path(cinema), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Voir', admin_cinema_path(cinema) %></td>
+        <td><%= link_to 'Modifier', edit_admin_cinema_path(cinema) %></td>
+        <td><%= link_to 'Supprimer', admin_cinema_path(cinema), method: :delete, data: { confirm: 'Êtes vous sûr?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Cinema', new_admin_cinema_path %>
+<%= link_to 'Ajouter une nouvelle salle', new_admin_cinema_path, { class: 'btn btn-success' } %>
