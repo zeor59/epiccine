@@ -15,6 +15,7 @@ EpicCine::Application.routes.draw do
       resources :characters
       resources :movie_characters
       resources :comments
+      resources :cinemas
       root 'movies#index'
     end
   end
